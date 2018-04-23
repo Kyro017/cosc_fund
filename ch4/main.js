@@ -151,10 +151,56 @@ function printTheNumbers() {
 
 function factorial(n) {
   let result = 1;
-  for (let i = 1; i <= n; i++) {
+  // for (let i = n; i > 0; i--) {
+  //   result = result * i;
+  // }
+  let i = n;
+  while (i > 0){
     result = result * i;
+    i--;
   }
   return result;
 }
 
-console.log(factorial(50293));
+// console.log("factorial of 5 is " + factorial(5));
+// console.log("factorial of 3 is " + factorial(3));
+// console.log("factorial of 76 is " + factorial(76));
+// console.log("factorial of 170 is " + factorial(171));
+
+
+function recursiveFactorial(n) {
+  if (n <= 1){
+    return 1;
+  } else {
+    return n * recursiveFactorial(n - 1);
+  }
+}
+
+// console.log(recursiveFactorial(170));
+
+function countDown(start) {
+  for (let i = start; i >= 0; i--){
+    console.log(i);
+  }
+  console.log("KABOOM!!!");
+}
+//countDown(10);
+
+function countUP(start) {
+  for (let i = start; i <= 10; i ++){
+    for (let j = 1; j<= 10; j ++){
+      for (let k = 1; k <= 10; k ++){
+        for (let l =1; l <= 10; l ++){
+          for (let m = 1; m <= 10; m ++){
+            for (let n = 1; n <= 10; n ++){
+              for (let o = 1; o <= 10; o ++){
+                console.log(i * j * k * l * m * n * o);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+countUP(1);
